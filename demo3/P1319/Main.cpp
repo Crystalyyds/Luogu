@@ -6,7 +6,7 @@ int main() {
   int arr[100];
   int N, W;
   cin >> N >> W;
-  int array[N][N];
+  int array[210][210];
   for (int i = 0; i < N; i++) {
     for (int j = 0; j < N; j++) {
       if (num == W) {
