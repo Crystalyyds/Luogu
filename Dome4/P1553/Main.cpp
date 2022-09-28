@@ -45,7 +45,7 @@ void fun(string str) {
       cout << 0;
       temp = str.find('/') + 1;
       for (int i = temp; i < str.length(); i++) {
-        if (str[i] == '0') {
+        if (str[i] == '0') { 
           temp++;
         }
         if (str[i] != '0') {
