@@ -23,25 +23,24 @@ int main() {
       max = an[i];
     }
   }
-  max += 1;
-  // for (int i = 0; i < 26; i++) {
-  //   as[max][i] = 'A' + i;
-  // }
-  max -= 1;
   for (int i = 0; i < 26; i++) {
     int temp = an[i];
     for (int j = max - 1; j >= max - temp; j--) {
       as[j][i] = '*';
     }
-    for (int j = 0; j < max - temp - 1; j++) {
+    for (int j = 0; j <= max - temp - 1; j++) {
       as[j][i] = ' ';
     }
   }
-
   for (int i = 0; i < max; i++) {
     for (int j = 0; j < 26; j++) {
-      cout << as[i][j];
+      cout << as[i][j] << " ";
     }
-    cout << endl;
+    if (i < 25) {
+      cout << endl;
+    }
+  }
+  for (int i = 0; i < 26; i++) {
+    cout << (char)('A' + i) << " ";
   }
 }
