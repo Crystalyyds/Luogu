@@ -34,13 +34,14 @@ int main() {
   }
   for (int i = 0; i < max; i++) {
     for (int j = 0; j < 26; j++) {
-      cout << as[i][j] << " ";
+      cout << as[i][j];
+      if (j != 25) {
+        cout << " ";
+      }
     }
     if (i < 25) {
       cout << endl;
     }
   }
-  for (int i = 0; i < 26; i++) {
-    cout << (char)('A' + i) << " ";
-  }
+  cout << "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
 }
