@@ -16,7 +16,7 @@ int main() {
   while (cin >> str) {
     int j = 0;
     for (int i = 0; i < str.length(); i++) {
-      if (str[i] != '/' || str[i] != '+' || str[i] != '-') {
+      if (str[i] != '/' && (str[i] != '+' && str[i] != '-')) {
         arr[j] += str[i];
       } else {
         j++;
