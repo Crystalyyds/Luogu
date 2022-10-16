@@ -1,0 +1,16 @@
+
+R
+java:S4973"<Strings and Boxed types should be compared using "equals()".(þ›Ä²
+R
+java:S4973"<Strings and Boxed types should be compared using "equals()".(×Ú¼Ð
+W
+java:S4973"<Strings and Boxed types should be compared using "equals()".(ÖÑÞßøÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ùà÷™
+h
+java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Çµí‘
+Y
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(á‡Ÿüþÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(üöîß
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ìÑÑÈÿÿÿÿÿ
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(ùáß˜þÿÿÿÿ
+N	java:S106#"9Replace this use of System.out or System.err by a logger.(ÇÙ¹œ

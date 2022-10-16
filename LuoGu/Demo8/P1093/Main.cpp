@@ -6,6 +6,13 @@ struct one {
   int sx;
   int yy;
 } arr[310];
+bool fun(one a, one b) {
+  if (a.sx + a.yw + a.yy != b.sx + b.yw + b.yy) {
+    return a.sx + a.yw + a.yy > b.sx + b.yw + b.yy;
+  } else {
+    return a.yw > b.yw;
+  }
+}
 int n;
 int main() {
   cin >> n;
@@ -13,26 +20,8 @@ int main() {
     cin >> arr[i].yw >> arr[i].sx >> arr[i].yy;
     arr[i].i = i;
   }
-  for (int i = 2; i <= n; i++) {
-    one temp = arr[i];
-    int j;
-    int tempnums = arr[i].yw + arr[i].sx + arr[i].yy;
-    for (j = i - 1; j >= 1; j--) {
-      if ((arr[j].yw + arr[j].sx + arr[j].yy) < tempnums) {
-        arr[j + 1] = arr[j];
-      } else if (tempnums = arr[j].yw + arr[j].sx + arr[j].yy) {
-        if (temp.yw > arr[j].yw) {
-          arr[j + 1] = arr[j];
-        } else {
-          break;
-        }
-      } else {
-        break;
-      }
-      arr[j] = temp;
-    }
-  }
-  for (int i = i; i <= n; i++) {
+  sort(arr + 1, arr + n + 1, fun);
+  for (int i = 1; i <= 5; i++) {
     cout << arr[i].i << " " << arr[i].yw + arr[i].sx + arr[i].yy << endl;
   }
   return 0;

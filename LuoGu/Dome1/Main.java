@@ -1,3 +1,5 @@
+package Dome1;
+
 import java.util.Scanner;
 
 //no11

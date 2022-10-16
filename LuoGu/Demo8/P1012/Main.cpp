@@ -1,12 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
+// https://www.luogu.com.cn/record/89995497
 int n;
-bool fun(string a, string b) {
-  if (a[0] != b[0]) {
-    return a[0] > b[0];
-  } else {
-  }
-}
+bool fun(string a, string b) { return a + b > b + a; }
 string arr[30];
 int main() {
   cin >> n;
