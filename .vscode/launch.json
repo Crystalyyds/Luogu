@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "school.day5.A.Main",
+            "projectName": "LuoGu_6f53402b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "Practice.dada.Main",
             "projectName": "LuoGu_6f53402b"
         }

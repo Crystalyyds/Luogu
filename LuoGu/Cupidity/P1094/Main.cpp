@@ -1,16 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n, g, arr[30010], cnt;
+long long n, g, arr[30010], cnt;
+// https://www.luogu.com.cn/record/90806217
 int main() {
   cin >> g;
   cin >> n;
-  for (int i = 1; i <= n; i++) {
+  for (long long i = 1; i <= n; i++) {
     cin >> arr[i];
   }
-  sort(arr, arr + n);
-  int j = 1;
+  sort(arr + 1, arr + n + 1);
+  long long j = 1;
   for (int i = n; i >= j; i--) {
-    if (arr[j] + arr[i] > 100) {
+    if (arr[j] + arr[i] > g) {
       cnt++;
     } else {
       j++;
