@@ -93,5 +93,6 @@
         "variant": "cpp"
     },
     "cmake.configureOnOpen": true,
-    "cmake.sourceDirectory": "${workspaceFolder}/LuoGu/Demo7/P1009"
+    "cmake.sourceDirectory": "${workspaceFolder}/LuoGu/Demo7/P1009",
+    "files.encoding": "gb18030"
 }
