@@ -94,5 +94,7 @@
     },
     "cmake.configureOnOpen": true,
     "cmake.sourceDirectory": "${workspaceFolder}/LuoGu/Demo7/P1009",
-    "files.encoding": "gb18030"
+    "files.encoding": "gb18030",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
 }
