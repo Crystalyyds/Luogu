@@ -20,4 +20,12 @@ public class Main {
         System.out.println(index);
         System.out.println(att);
     }
+
+    public static Scanner getScanner() {
+        return scanner;
+    }
+
+    public static void setScanner(Scanner scanner) {
+        Main.scanner = scanner;
+    }
 }

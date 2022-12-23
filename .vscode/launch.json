@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "TEST.BaGa.Main",
+            "projectName": "algorithm_35daeda6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "school.day5.A.Main",
             "projectName": "LuoGu_6f53402b"
         },
