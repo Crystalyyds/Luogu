@@ -1,0 +1,5 @@
+n = float(input())
+f = float(n*(43.59/60))
+# print()
+print('%.2f'%f)
+# print("{:.2}".format())

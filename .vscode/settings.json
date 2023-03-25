@@ -96,5 +96,6 @@
     "cmake.sourceDirectory": "${workspaceFolder}/LuoGu/Demo7/P1009",
     "files.encoding": "gb18030",
     "editor.formatOnPaste": true,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black"
 }
