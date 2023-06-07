@@ -1,0 +1,1 @@
+{"name":"Local: Main","url":"d:\\Code\\algorithm\\school\\23chun\\D\\Main.cpp","tests":[{"id":1685755394173,"input":"3\n0.25 0.35 0.4\n0.03 0.02 0.01","output":"0.0185"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code\\algorithm\\school\\23chun\\D\\Main.cpp","group":"local","local":true}
