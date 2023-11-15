@@ -1,51 +1,36 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-#include <math.h>
-#include <vector>
-
-static int ii = 0;
-
-bool Place(int k, int i, int *x) // 判定两个皇后是否在同一列或在同一斜线上
+typedef long long ll;
+ll op, x, a, b;
+void solve()
 {
-    for (int j = 0; j < k; j++)
-        if ((x[j] == i) || (abs(x[j] - i) == abs(j - k)))
-            return false;
-    return true;
-}
-
-void NQueens(int k, int n, int *x) // 递归函数（求解n皇后问题）
-{
-    for (int i = 0; i < n; i++)
+    ll cnt = 0;
+    scanf("%lld%lld%lld", &x, &a, &b);
+    while (x)
     {
-        if (Place(k, i, x))
+        // cout << x << endl;
+        if (x - sqrt(x + b) >= x - (x + a) / 2)
         {
-            x[k] = i;
-            if (k == n - 1)
-            {
-                ii++;
-                cout << "(" << ii << ") ";
-                for (i = 0; i < n; i++)
-                {
-                    cout << x[i] << " ";
-                }
-                cout << endl;
-            }
-            else
-            {
-                NQueens(k + 1, n, x);
-            }
+            x = sqrt(x + b);
         }
+        else if (x - (x + a) / 2 >= 1)
+        {
+            x = (x + a) / 2;
+        }
+        else
+        {
+            x -= 1;
+        }
+        cnt++;
     }
-}
-void NQueens(int n, int *x)
-{
-    NQueens(0, n, x);
+    printf("%lld\n", cnt);
 }
 
 int main()
 {
-    int x[8];
-    for (int i = 0; i < 8; i++)
-        x[i] = -1;
-    NQueens(8, x);
+    scanf("%d", &op);
+    while (op--)
+    {
+        solve();
+    }
 }

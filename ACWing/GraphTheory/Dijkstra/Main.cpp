@@ -1,3 +1,23 @@
+// struct node 从小到大
+// {
+//     int l, r;
+//     bool operator<(const node &v) const
+//     {
+//         return r < v.r;
+//     }
+// }
+// v[maxn];
+
+// truct node 优先队列默认为从大到小 但这个是从小到大
+// {
+//     int l, r;
+//     bool operator<(const node &v) const
+//     {
+//         return r > v.r;
+//     }
+// };
+// priority_queue<node> q;
+
 // priority_queue<PII> pq1;
 // priority_queue<PII, vector<PII>, less<PII>> pq1;
 // 大根堆

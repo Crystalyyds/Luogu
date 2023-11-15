@@ -1,0 +1,1 @@
+{"name":"Local: Mian","url":"d:\\Code\\algorithm\\school\\ny\\7_19\\F\\Mian.cpp","tests":[{"id":1689744252893,"input":"2\n8 2\n10100101\n5 233333333333333333\n11101","output":"11111101\n11111"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code\\algorithm\\school\\ny\\7_19\\F\\Mian.cpp","group":"local","local":true}

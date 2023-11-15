@@ -1,8 +1,17 @@
-#include <stdio.h>
+#include <iostream>
+#include <math.h>
+using namespace std;
+const double pi = 3.1415926;
+double s, r, h, v;
+
 int main()
 {
-    int *arr;
-    arr = (int *)malloc(3 * 3 * 3 * sizeof(int));
-    *(arr + 3 * 1 * 1 + 3 * 1 + 1) = 23;
-    printf("%d", (arr + 3 * 1 * 1 + 3 * 1 + 1));
+    cin >> s;
+    s /= pi * 4;
+    r = sqrt(s);
+    h = 2 * sqrt(2) * r;
+    v = pi * r * r * h / 3;
+    printf("%.2lf\n", v);
+    printf("%.2lf\n", h);
+    printf("%.2lf\n", r);
 }
