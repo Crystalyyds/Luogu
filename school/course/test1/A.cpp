@@ -1,136 +1,71 @@
-#include <iostream>
-#include <stdlib.h>
+#include <bits/stdc++.h>
 using namespace std;
-class SortableList
+const int N = 1e4 + 10;
+struct node
 {
-public:
-    SortableList(int mSize)
+    int a, b, c, d;
+    int na, nb, nc, nd;
+    int a1, b1, c1, d1;
+    int k;
+    bool operator<(const node &v) const
     {
-        maxSize = mSize;
-        l = new int[maxSize];
-        n = 0; // 数组中已有元素个数
+        return k < v.k;
     }
-    ~SortableList()
+} arr[N];
+
+int st[N], brr[N];
+int n;
+int ya, yb, yc, yd;
+bool kk = 0;
+void fun(int u)
+{
+    if (u > n)
     {
-        delete[] l;
-    }
-    void Input();
-    void Output();
-
-    void MergeSort();
-    void MergeSort(int left, int right);
-    void Merge(int left, int mid, int right);
-    void QuickSort();
-    void Swap(int i, int j);
-    void QuickSort(int left, int right);
-    int Partition(int left, int right);
-
-private:
-    int *l;
-    int maxSize;
-    int n;
-};
-
-void SortableList::Input()
-{
-    n = maxSize;
-    for (int i = 0; i < maxSize; i++)
-    {
-        l[i] = rand() % 141;
-    }
-}
-
-void SortableList::Output()
-{
-    for (int i = 1; i < maxSize; i++)
-    {
-        cout << l[i] << " ";
-    }
-    cout << endl;
-}
-
-void SortableList::MergeSort()
-{
-    MergeSort(0, n - 1);
-}
-
-void SortableList::MergeSort(int left, int right)
-{
-    if (left >= right)
+        kk = 1;
         return;
-    int mid = (left + right) / 2;
-    MergeSort(left, mid);
-    MergeSort(mid + 1, right);
-    Merge(left, mid, right);
-}
-void SortableList::Merge(int left, int mid, int right)
-{
-    int *temp = new int[right - left + 1];
-    int i = left, j = mid + 1, k = 0;
-    while ((i <= mid) && (j <= right))
-        if (l[i] <= l[j])
-            temp[k++] = l[i++];
-        else
-            temp[k++] = l[j++];
-    while (i <= mid)
-        temp[k++] = l[i++];
-    while (j <= right)
-        temp[k++] = l[j++];
-    for (i = 0, k = left; k <= right;)
-        l[k++] = temp[i++];
-}
-void SortableList::Swap(int i, int j)
-{
-    int c = l[i];
-    l[i] = l[j];
-    l[j] = c;
-}
-
-int SortableList::Partition(int left, int right)
-{
-    int i = left, j = right + 1;
-    do
+    }
+    for (int i = 1; i <= n; i++)
     {
-        do
-            i++;
-        while (l[i] < l[left]);
-        do
-            j--;
-        while (l[j] > l[left]);
-        if (i < j)
-            Swap(i, j);
-    } while (i < j);
-    Swap(left, j);
-    return j;
-}
-void SortableList::QuickSort()
-{
-    QuickSort(0, n - 1);
-}
-void SortableList::QuickSort(int left, int right)
-{
-    if (left < right)
-    {
-        int j = Partition(left, right);
-        QuickSort(left, j - 1);
-        QuickSort(j + 1, right);
+        // cout << i << endl;
+        if (!st[i] && arr[i].na - arr[i].a <= ya && arr[i].nb - arr[i].b <= yb && arr[i].nc - arr[i].c <= yc && arr[i].nd - arr[i].d <= yd)
+        {
+            st[i] = 1;
+            brr[u] = i;
+            arr[i].k = u;
+            ya += arr[i].a, yb += arr[i].b, yc += arr[i].c, yd += arr[i].d;
+            // cout << ya << " " << yb << " " << yc << " " << yd << endl;
+            fun(u + 1);
+            if (kk == 1)
+                return;
+            // st[u] = 0;
+        }
     }
 }
+
 int main()
 {
-    srand((unsigned)time(NULL));
-    SortableList list(25);
-    list.Input();
-    cout << "排序前" << endl;
-    list.Output();
-    list.MergeSort();
-    cout << "归并排序后" << endl;
-    list.Output();
-    list.Input();
-    cout << "排序前" << endl;
-    list.Output();
-    cout << "快排排序后" << endl;
-    list.QuickSort();
-    list.Output();
-    return 0;
+    cin >> n;
+    cin >> ya >> yb >> yc >> yd;
+    for (int i = 1; i <= n; i++)
+    {
+        cin >> arr[i].a >> arr[i].b >> arr[i].c >> arr[i].d;
+    }
+    for (int i = 1; i <= n; i++)
+    {
+        cin >> arr[i].na >> arr[i].nb >> arr[i].nc >> arr[i].nd;
+        arr[i].k = arr[i].na - arr[i].a + arr[i].nb - arr[i].b + arr[i].nc - arr[i].c + arr[i].nd - arr[i].d;
+        // heap.push(arr[i]);
+    }
+    fun(1);
+    if (kk = true)
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            cout << arr[i].k << " ";
+        }
+    }
+    else
+    {
+        cout << "NO" << endl;
+    }
 }
